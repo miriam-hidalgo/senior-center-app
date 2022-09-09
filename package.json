@@ -1,0 +1,23 @@
+{
+  "name": "senior-center-app",
+  "version": "1.0.0",
+  "description": "Social service resource and registration app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miriam-hidalgo/senior-center-app.git"
+  },
+  "author": "Miriam Hidalgo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miriam-hidalgo/senior-center-app/issues"
+  },
+  "homepage": "https://github.com/miriam-hidalgo/senior-center-app#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
