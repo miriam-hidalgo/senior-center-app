@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+
+:root {
+  --primary-clr: #bc0a0f;
+  --accent-clr: #4a4a4a;
+  --neutral-clr: #ffffff;
+
+  --ff-global: "PT Serif", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-global);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
