@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+
 :root {
   --primary-clr: #009fc2;
   --accent-clr: #212121;
   --neutral-clr: #ffffff;
 
   --ff-global: "PT Serif", serif;
+  --ff-title: "Merriweather", serif;
 }
 
 *,
@@ -17,6 +20,7 @@
 body {
   font-family: var(--ff-global);
   color: var(--accent-clr);
+  font-size: 1.3rem;
   margin: 0;
   padding: 0;
 }
@@ -27,12 +31,22 @@ body {
   margin: 0 auto;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-around;
+img {
+  max-width: 100%;
+}
+
+.navBar {
+  background-color: #009fc2;
+  font-family: var(--ff-title);
+  font-weight: 700;
+  padding: 0.1em 0;
+  box-shadow: 10px 5px 5px lightgray;
 }
 
 .nav__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .nav__item {
@@ -41,5 +55,5 @@ body {
 
 .nav__link {
   text-decoration: none;
-  color: var(--accent-clr);
+  color: var(--neutral-clr);
 }
