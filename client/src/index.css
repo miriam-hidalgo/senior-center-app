@@ -3,9 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
 
 :root {
-  --primary-clr: #009fc2;
-  --accent-clr: #212121;
-  --neutral-clr: #ffffff;
+  --primary-clr: #cac09f;
+  --primary-clr-dark: #5192d1;
+  --accent-clr: #d84f2c;
+  --accent-clr-dark: #393233;
+  --neutral-clr: #fffdfe;
 
   --ff-global: "PT Serif", serif;
   --ff-title: "Merriweather", serif;
@@ -19,8 +21,7 @@
 
 body {
   font-family: var(--ff-global);
-  color: var(--accent-clr);
-  font-size: 1.3rem;
+  color: var(--accent-clr-dark);
   margin: 0;
   padding: 0;
 }
@@ -31,29 +32,88 @@ body {
   margin: 0 auto;
 }
 
+li {
+  list-style-type: none;
+}
+
 img {
   max-width: 100%;
 }
 
 .navBar {
-  background-color: #009fc2;
+  background-color: var(--accent-clr);
   font-family: var(--ff-title);
+  font-size: 1rem;
   font-weight: 700;
-  padding: 0.1em 0;
+  padding: 0.2em 0;
   box-shadow: 10px 5px 5px lightgray;
 }
 
-.nav__list {
+.nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
-.nav__item {
-  list-style-type: none;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .nav__link {
   text-decoration: none;
+  transition: 0.7s ease;
   color: var(--neutral-clr);
+}
+
+.nav__link:hover {
+  color: var(--primary-clr);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav__menu {
+  position: fixed;
+  left: -100%;
+  top: 70px;
+  gap: 0;
+  flex-direction: column;
+  background-color: var(--accent-clr);
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.nav__item {
+  margin: 16px 0;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--neutral-clr);
 }

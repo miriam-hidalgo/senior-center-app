@@ -4,12 +4,13 @@ function NavBar() {
   return (
     <div className="navBar">
       <nav className="nav container">
-        <ul className="nav__list">
-          <li className="nav__item">
-            <a href="#" className="nav__link logo">
-              <img src="images/logo.png" alt="" />
-            </a>
-          </li>
+        <div className="nav__logo">
+          <a href="#" className="nav__link logo">
+            <img src="images/logo-clean-hands-100.png" alt="" />
+            <h1>Senior Center</h1>
+          </a>
+        </div>
+        <ul className="nav__menu">
           <li className="nav__item">
             <a href="#" className="nav__link">
               Services
@@ -26,6 +27,12 @@ function NavBar() {
             </a>
           </li>
         </ul>
+
+        <div className="hamburger">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
       </nav>
     </div>
   );
