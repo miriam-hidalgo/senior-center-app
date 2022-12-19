@@ -108,7 +108,7 @@ img {
   left: 0;
 }
 
-/* .bar {
+.bar {
   display: block;
   width: 25px;
   height: 3px;
@@ -116,4 +116,4 @@ img {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: var(--neutral-clr);
-} */
+}
