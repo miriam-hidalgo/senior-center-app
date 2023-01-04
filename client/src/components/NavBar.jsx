@@ -3,16 +3,11 @@ import React from "react";
 function NavBar() {
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav__menu");
-  const navItem = document.querySelectorAll(".nav__item");
 
   function handleMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
     console.log("You clicked hamburger btn");
-    navItem.forEach((n) => {
-      n.hamburger.classList.remove("active");
-      n.navMenu.classList.remove("active");
-    });
   }
 
   return (
