@@ -77,12 +77,12 @@ img {
   transition: 0.3s;
 }
 
-.nav__item {
-  margin: 16px 0;
-}
-
 .nav__menu.active {
   left: 0;
+}
+
+.nav__item {
+  margin: 16px 0;
 }
 
 /* Hamburger Menu */

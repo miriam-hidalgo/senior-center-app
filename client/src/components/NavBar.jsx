@@ -3,18 +3,17 @@ import React from "react";
 function NavBar() {
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav__menu");
+  const navItem = document.querySelectorAll(".nav__item");
 
-  hamburger.addEventListener("click", () => {
+  function handleMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-  });
-
-  document.querySelectorAll(".nav__item").forEach((n) =>
-    n.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
-    })
-  );
+    console.log("You clicked hamburger btn");
+    navItem.forEach((n) => {
+      n.hamburger.classList.remove("active");
+      n.navMenu.classList.remove("active");
+    });
+  }
 
   return (
     <div className="navBar">
@@ -25,10 +24,7 @@ function NavBar() {
             <h1>Senior Center</h1>
           </a>
         </div>
-        <ul
-          className="nav__menu"
-          // onClick={navMenu.classList.toggle("active")}
-        >
+        <ul className="nav__menu" onClick={handleMenu}>
           <li className="nav__item">
             <a href="#" className="nav__link">
               Services
@@ -46,10 +42,7 @@ function NavBar() {
           </li>
         </ul>
 
-        <div
-          className="hamburger"
-          onClick={hamburger.classList.toggle("active")}
-        >
+        <div className="hamburger" onClick={handleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
