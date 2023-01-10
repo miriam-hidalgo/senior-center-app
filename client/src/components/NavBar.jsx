@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 function NavBar() {
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".nav__menu");
+  const [open, setOpen] = useState("closed");
 
-  function handleMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    console.log("You clicked hamburger btn");
-  }
+  const toggleMenu = () => {
+    setOpen(open === "closed" ? "active" : "closed");
+  };
 
   return (
     <div className="navBar">
@@ -19,7 +16,7 @@ function NavBar() {
             <h1>Senior Center</h1>
           </a>
         </div>
-        <ul className="nav__menu" onClick={handleMenu}>
+        <ul onClick={toggleMenu} className={`nav__menu ${open}`}>
           <li className="nav__item">
             <a href="#" className="nav__link">
               Services
@@ -37,7 +34,7 @@ function NavBar() {
           </li>
         </ul>
 
-        <div className="hamburger" onClick={handleMenu}>
+        <div onClick={toggleMenu} className={`hamburger ${open}`}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
