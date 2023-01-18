@@ -3,10 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
 
 :root {
-  --primary-clr: #cac09f;
-  --primary-clr-dark: #5192d1;
-  --accent-clr: #d84f2c;
-  --accent-clr-dark: #393233;
+  --primary-clr: #c77976;
+  --primary-clr-dark: #181818;
+  --accent-clr: #fff5cf;
+  --accent-clr-dark: #386775;
   --neutral-clr: #fffdfe;
 
   --ff-global: "PT Serif", serif;
@@ -21,7 +21,7 @@
 
 body {
   font-family: var(--ff-global);
-  color: var(--accent-clr-dark);
+  color: var(--neutral-clr);
   margin: 0;
   padding: 0;
 }
@@ -45,13 +45,15 @@ img {
   max-width: 100%;
 }
 
+/* Navigation  */
 .navBar {
-  background-color: var(--accent-clr);
+  background-color: var(--primary-clr);
   font-family: var(--ff-title);
   font-size: 1em;
   font-weight: 700;
   padding: 0.2em 0;
-  box-shadow: 10px 5px 5px lightgray;
+  box-shadow: 30px 15px 5px darkgrey;
+  z-index: 2;
 }
 
 .nav {
@@ -71,10 +73,11 @@ img {
   top: 70px;
   gap: 0;
   flex-direction: column;
-  background-color: var(--accent-clr);
+  background-color: var(--primary-clr);
   width: 100%;
   text-align: center;
   transition: 0.3s;
+  z-index: 2;
 }
 
 .nav__menu.active {
@@ -111,13 +114,39 @@ img {
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
+/* Hero */
+.hero.hero__img {
+  opacity: 0.8;
+  max-width: 100%;
+  z-index: 1;
+}
 
-@media (min-width: 700px) {
+.hero__btn--group {
+  margin-top: 2%;
+  margin-left: 40%;
+  z-index: 2;
+}
+
+.hero__btn {
+  font-size: 1em;
+  background-color: var(--primary-clr);
+  color: var(--neutral-clr);
+  padding: 0.5em;
+  border-radius: 10px;
+  border-color: var(--accent-clr);
+  box-shadow: none;
+}
+
+.hero__btn + .hero__btn {
+  margin-left: 30px;
+}
+
+@media (min-width: 800px) {
   .navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .nav__menu {
@@ -141,10 +170,30 @@ img {
   .hamburger {
     display: none;
   }
+
+  .hero__btn {
+    font-size: 1.2em;
+
+    padding: 0.8em;
+  }
 }
 
-/* @media (min-width: 900px) {
+@media (min-width: 900px) {
+  .navBar {
+    font-size: 1.1rem;
+  }
+  .hero__btn {
+    font-size: 1.3em;
+    padding: 0.9em;
+  }
 }
 
 @media (min-width: 1200px) {
-} */
+  .navBar {
+    font-size: 1.3rem;
+  }
+  .hero__btn {
+    font-size: 1.4em;
+    padding: 1em;
+  }
+}
