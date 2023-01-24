@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div className="hero">
       <div className="hero__img">
-        <img src="../images/hero.jpg" alt="" />
+        <img src="../images/hero.jpg" alt="new york city park" />
       </div>
       <div className="hero__btn--group">
         <button className="hero__btn" type="submit">

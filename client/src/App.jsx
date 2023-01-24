@@ -1,13 +1,16 @@
 import React from "react";
-// import "./App.css";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
+import About from "./components/About";
+import Activity from "./components/Activity";
 
 function App() {
   return (
     <React.StrictMode>
       <NavBar />
       <Hero />
+      <About />
+      <Activity />
     </React.StrictMode>
   );
 }
