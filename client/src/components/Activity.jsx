@@ -4,7 +4,7 @@ function Activity() {
   return (
     <div className="activity">
       <div className="activity__img">
-        <img src="../images/activity.jpg" alt="bingo numbers" />
+        <img src="../images/activity.jpg" alt="welcome mat" />
       </div>
       <div className="activity__content">
         <h2>Activities</h2>
@@ -13,7 +13,7 @@ function Activity() {
         </p>
         <div className="activity__btn--group">
           <button className="activity__btn" type="submit">
-            Learn More
+            Learn More!
           </button>
         </div>
       </div>
