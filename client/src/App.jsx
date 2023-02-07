@@ -1,17 +1,17 @@
 import React from "react";
-import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Activity from "./components/Activity";
+import Home from "./pages/Home";
+import Activities from "./pages/Activities";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <React.StrictMode>
-      <NavBar />
-      <Hero />
-      <About />
-      <Activity />
-    </React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="activities" element={<Activities />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
