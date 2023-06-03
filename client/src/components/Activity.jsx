@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Activity() {
   return (
@@ -12,9 +13,11 @@ function Activity() {
           Learn more about our current activities, class offerings, and events!
         </p>
         <div className="activity__btn--group">
-          <button className="activity__btn" type="submit">
-            Learn More!
-          </button>
+          <Link to={`activities`}>
+            <button className="activity__btn" type="submit">
+              Learn More!
+            </button>
+          </Link>
         </div>
       </div>
     </div>

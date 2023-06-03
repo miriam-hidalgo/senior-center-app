@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [open, setOpen] = useState("closed");
@@ -18,19 +19,19 @@ function NavBar() {
         </div>
         <ul onClick={toggleMenu} className={`nav__menu ${open}`}>
           <li className="nav__item">
-            <a href="#" className="nav__link">
+            <Link to={`services`} className="nav__link">
               Services
-            </a>
+            </Link>
           </li>
           <li className="nav__item">
-            <a href="#" className="nav__link">
+            <Link to={`activities`} className="nav__link">
               Classes & Activities
-            </a>
+            </Link>
           </li>
           <li className="nav__item">
-            <a href="#" className="nav__link">
-              About Us
-            </a>
+            <Link to={`contact`} className="nav__link">
+              Contact
+            </Link>
           </li>
         </ul>
 
